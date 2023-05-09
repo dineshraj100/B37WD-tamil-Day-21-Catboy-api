@@ -1,23 +1,17 @@
-async function foo(){
-    try{
-    let res=await fetch("https://api.catboys.com/img");
-    let res1=await res.json();
+async function foo() {
+  try {
+    let res = await fetch('https://api.catboys.com/img');
+    let res1 = await res.json();
     console.log(res1);
-    
 
-    
-    var ele=document.getElementById("img")
-    ele.innerHTML= `<div class="card" style="width: 300px;">
+    var ele = document.getElementById('img');
+    ele.innerHTML = `<div class="card" >
     <img src="${res1.url}" class="card-img-top" alt="...">
     <div class="card-body">
     </div>
-  </div>`
-    }catch(error){
-        console.log(error);
-    }
+  </div>`;
+  } catch (error) {
+    console.log(error);
+  }
 }
-    foo();
-
-
-
-
+foo();
